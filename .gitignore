@@ -1,0 +1,10 @@
+# node
+node_modules/
+
+# tern
+.tern-port
+
+# project
+dist/
+distribution/
+public/

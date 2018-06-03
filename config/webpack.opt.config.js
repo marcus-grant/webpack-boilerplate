@@ -1,0 +1,21 @@
+/* eslint-disable */
+var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+var UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+/* eslint-enable */
+
+module.exports = {
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        uglifyOptions: {
+          mangle: {
+            keep_fnames: true,
+          },
+        },
+      }),
+    ],
+  },
+  plugins: [
+    new OptimizeCssAssetsPlugin(),
+  ],
+};
